@@ -22,5 +22,7 @@ namespace ArrayLibrary {
 
 		public static List<int> GradingScores = new List<int>();
 
+		public static List<int> HighTemps = new List<int>();
+
 	}
 }

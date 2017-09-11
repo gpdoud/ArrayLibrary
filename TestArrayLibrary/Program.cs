@@ -8,6 +8,27 @@ using ArrayLibrary;
 namespace TestArrayLibrary {
 	class Program {
 
+		void AvgHighTempForSept2017() {
+			LearningArrays.HighTemps.Add(64);  // 9/1
+			LearningArrays.HighTemps.Add(63);  // 9/2
+			LearningArrays.HighTemps.Add(81);  // 9/3
+			LearningArrays.HighTemps.Add(86);  // 9/4
+			LearningArrays.HighTemps.Add(77);  // 9/5
+			LearningArrays.HighTemps.Add(70);  // 9/6
+			LearningArrays.HighTemps.Add(70);  // 9/7
+			LearningArrays.HighTemps.Add(75);  // 9/8
+			LearningArrays.HighTemps.Add(73);  // 9/9
+			LearningArrays.HighTemps.Add(73);  // 9/10
+			LearningArrays.HighTemps.Add(71);  // 9/11
+
+			var SumTemps = 0;
+			foreach(var temp in LearningArrays.HighTemps) {
+				SumTemps += temp;
+			}
+			Console.WriteLine($"On Sept 11, the avg Cincinnati temp in Sept 2017 is {SumTemps / 11}");
+			
+		}
+
 		void Run() {
 			var aStudent = LearningArrays.Students[4];
 			Console.WriteLine($"The second student in the array is {aStudent}");
@@ -42,7 +63,7 @@ namespace TestArrayLibrary {
 			}
 		}
 		static void Main(string[] args) {
-			new Program().Run();
+			new Program().AvgHighTempForSept2017();
 		}
 	}
 }
