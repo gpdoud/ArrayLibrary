@@ -26,6 +26,20 @@ namespace TestArrayLibrary {
 				FrameTotal += score;
 			}
 			Console.WriteLine($"Total frame score is {FrameTotal} and average is {FrameTotal / LearningArrays.Frames.Count()}");
+
+			LearningArrays.GradingScores.Add(97);
+			LearningArrays.GradingScores.Add(89);
+			LearningArrays.GradingScores.Add(88);
+			LearningArrays.GradingScores.Add(78);
+			LearningArrays.GradingScores.Add(63);
+			LearningArrays.GradingScores.Remove(97);
+			var idx2 = LearningArrays.GradingScores.IndexOf(63);
+			LearningArrays.GradingScores[idx2] = 65;
+			Console.WriteLine($"There are {LearningArrays.GradingScores.Count()} items in the list");
+
+			foreach(var score in LearningArrays.GradingScores) {
+				Console.WriteLine($"A score is {score}");
+			}
 		}
 		static void Main(string[] args) {
 			new Program().Run();
